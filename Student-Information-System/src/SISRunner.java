@@ -8,7 +8,7 @@ public class SISRunner
 			
 		public static void main(String[] args) throws FileNotFoundException
 			{
-				file=new Scanner(new File("studentInformation (1).txt"));
+				file=new Scanner(new File("studentInformation.txt"));
 				Menu.doMain();
 			}
 	public static void fillList()
