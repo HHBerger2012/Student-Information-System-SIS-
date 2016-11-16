@@ -16,9 +16,20 @@ public class SISRunner
 		while (file.hasNext())
 			{
 				String info=file.nextLine();
-				String first=info.substring(0, indexOf(' '));
-				students.add(new Student(null, null, 0, null, null, null, null, null, null));
+				students.add(read(info));
 			}
+	}
+	public static Student read(String str)
+	{
+		String[] places=new String[8];
+		for (int i=0; i<8; i++)
+			{
+				places[i]=str.substring(0, str.indexOf(' '));
+				str=str.substring(str.indexOf(' '));
+			}
+		//GPA is going to be 0; We can create a method that reads the arraylist and calculates GPA to set it.
+		return new Student(places[0], places[1], 0, places[2], places[4], places[6], places[3], places[5], places[7]);
+		
 	}
 
 }
