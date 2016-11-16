@@ -14,16 +14,8 @@ public class SISRunner
 		while (file.hasNext())
 			{
 				String info=file.nextLine();
-				
+				String first=info.substring(0, firstIndexOf(" "));
 				students.add(new Student(null, null, 0, null, null, null, null, null, null));
 			}
 	}
-	public static int findSpaces(String str)
-	{
-		for (int i=0; i<str.length(); i++)
-			{
-				
-			}
-		return 0;
-	}
-}//
+}
