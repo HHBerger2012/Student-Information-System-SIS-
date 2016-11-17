@@ -1,5 +1,6 @@
+import java.util.Comparator;
 
-public class Student
+public class Student implements Comparator
 	{
 		String first, last, period1, period2, period3;
 		double GPA;
@@ -88,6 +89,12 @@ public class Student
 			{
 				GPA = gPA;
 			}
-		
+		@Override
+		public int compare(Object o1, Object o2)
+			{
+				// TODO Auto-generated method stub
+				return 0;
+			}
+
 	}
 

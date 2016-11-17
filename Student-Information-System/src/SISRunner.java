@@ -9,14 +9,19 @@ public class SISRunner
 		public static void main(String[] args) throws FileNotFoundException
 			{
 				file=new Scanner(new File("studentInformation.txt"));
+				fillList();
+				Sort.sortLastName();
 				Menu.doMain();
 			}
 	public static void fillList()
 	{
+		int i=0;
 		while (file.hasNext())
 			{
 				String info=file.nextLine();
 				students.add(read(info));
+				students.get(i).setGPA(getGPA.newGPA());
+				i++;
 			}
 	}
 	public static Student read(String str)

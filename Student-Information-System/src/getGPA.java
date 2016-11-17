@@ -83,8 +83,9 @@ public class getGPA
 					}
 					}
 			}
-		public static void newGPA()
+		public static double newGPA()
 		{
 			newGPA=(g1+g2+g3)/3;
+			return newGPA;
 		}
 	}
