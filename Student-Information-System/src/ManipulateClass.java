@@ -36,8 +36,125 @@ public class ManipulateClass
 			for (Student s:SISRunner.students)
 				{
 					z++;
-					System.out.println(z+ " " + s.getFirst());
+					System.out.println(z+ " " + s.getFirst()+" "+s.getLast());
 				}
+			Scanner sc = new Scanner (System.in);
+			int ch = sc.nextInt();
+			System.out.println();
+			System.out.println("What class of "+SISRunner.students.get(ch-1).getFirst()+"'s would you like to switch?");
+			System.out.println("Period 1: "+SISRunner.students.get(ch-1).getPeriod1());
+			System.out.println("Period 2: "+SISRunner.students.get(ch-1).getPeriod2());
+			System.out.println("Period 3: "+SISRunner.students.get(ch-1).getPeriod3());
+			System.out.println();
+			Scanner sc2 = new Scanner (System.in);
+			int classc = sc2.nextInt();
+			switch (classc)
+			{
+				case 1:
+						{
+							System.out.println("What would you like to switch it with?");
+							Scanner sc4 = new Scanner (System.in);
+							int g = sc4.nextInt();
+							if (classc==g)
+								{
+									System.out.println("Can't replace a class with the same class");
+								}
+							else
+								{
+									if (g==2)
+										{
+											String class1 = SISRunner.students.get(ch-1).getPeriod1();
+											SISRunner.students.get(ch-1).setPeriod1(SISRunner.students.get(ch-1).getPeriod2());
+											SISRunner.students.get(ch-1).setPeriod2(class1);
+											System.out.println("Period 1: "+SISRunner.students.get(ch-1).getPeriod1());
+											System.out.println("Period 2: "+SISRunner.students.get(ch-1).getPeriod2());
+											System.out.println("Period 3: "+SISRunner.students.get(ch-1).getPeriod3());
+										}
+									if (g==3)
+										{
+											String class1 = SISRunner.students.get(ch-1).getPeriod1();
+											SISRunner.students.get(ch-1).setPeriod1(SISRunner.students.get(ch-1).getPeriod3());
+											SISRunner.students.get(ch-1).setPeriod3(class1);
+											System.out.println("Period 1: "+SISRunner.students.get(ch-1).getPeriod1());
+											System.out.println("Period 2: "+SISRunner.students.get(ch-1).getPeriod2());
+											System.out.println("Period 3: "+SISRunner.students.get(ch-1).getPeriod3());
+										}
+								}
+							break;
+						}
+				case 2:
+						{
+							System.out.println("What would you like to switch it with?");
+							Scanner sc4 = new Scanner (System.in);
+							int g = sc4.nextInt();
+							if (classc==g)
+								{
+									System.out.println("Can't replace a class with the same class");
+								}
+							else
+								{
+									if (g==1)
+										{
+											String class1 = SISRunner.students.get(ch-1).getPeriod1();
+											SISRunner.students.get(ch-1).setPeriod1(SISRunner.students.get(ch-1).getPeriod2());
+											SISRunner.students.get(ch-1).setPeriod2(class1);
+											System.out.println("Period 1: "+SISRunner.students.get(ch-1).getPeriod1());
+											System.out.println("Period 2: "+SISRunner.students.get(ch-1).getPeriod2());
+											System.out.println("Period 3: "+SISRunner.students.get(ch-1).getPeriod3());
+										}
+									if (g==3)
+										{
+											String class2 = SISRunner.students.get(ch-1).getPeriod2();
+											SISRunner.students.get(ch-1).setPeriod2(SISRunner.students.get(ch-1).getPeriod3());
+											SISRunner.students.get(ch-1).setPeriod3(class2);
+											System.out.println("Period 1: "+SISRunner.students.get(ch-1).getPeriod1());
+											System.out.println("Period 2: "+SISRunner.students.get(ch-1).getPeriod2());
+											System.out.println("Period 3: "+SISRunner.students.get(ch-1).getPeriod3());
+										}
+								}
+							break;
+						}
+				case 3:
+						{
+							System.out.println("What would you like to switch it with?");
+							Scanner sc5 = new Scanner (System.in);
+							int g = sc5.nextInt();
+							if (classc==g)
+								{
+									System.out.println("Can't replace a class with the same class");
+								}
+							else
+								{
+										{
+											if (g==1)
+												{
+													String class1 = SISRunner.students.get(ch-1).getPeriod1();
+													SISRunner.students.get(ch-1).setPeriod1(SISRunner.students.get(ch-1).getPeriod3());
+													SISRunner.students.get(ch-1).setPeriod3(class1);
+													System.out.println("Period 1: "+SISRunner.students.get(ch-1).getPeriod1());
+													System.out.println("Period 2: "+SISRunner.students.get(ch-1).getPeriod2());
+													System.out.println("Period 3: "+SISRunner.students.get(ch-1).getPeriod3());
+												}
+											if (g==2)
+												{
+													String class2 = SISRunner.students.get(ch-1).getPeriod2();
+													SISRunner.students.get(ch-1).setPeriod2(SISRunner.students.get(ch-1).getPeriod3());
+													SISRunner.students.get(ch-1).setPeriod3(class2);
+													System.out.println("Period 1: "+SISRunner.students.get(ch-1).getPeriod1());
+													System.out.println("Period 2: "+SISRunner.students.get(ch-1).getPeriod2());
+													System.out.println("Period 3: "+SISRunner.students.get(ch-1).getPeriod3());
+												}
+										}
+								}
+							break;
+						}
+				default:
+						{
+							System.out.println("That is not an option");
+							changeGrade();
+							break;
+						}
+			}
 		}
 		public static void changeGrade()
 		{
@@ -46,7 +163,7 @@ public class ManipulateClass
 			for (Student s:SISRunner.students)
 				{
 					z++;
-					System.out.println(z+ " " + s.getFirst());
+					System.out.println(z+ " " + s.getFirst()+" "+s.getLast());
 				}
 			Scanner sc = new Scanner (System.in);
 			int ch = sc.nextInt();
@@ -69,6 +186,7 @@ public class ManipulateClass
 						}
 				case 2:
 						{
+							System.out.println("What would you like to switch it to?");
 							Scanner sc4 = new Scanner (System.in);
 							String g = sc4.nextLine();
 							SISRunner.students.get(ch-1).setGrade2(g);
@@ -76,6 +194,7 @@ public class ManipulateClass
 						}
 				case 3:
 						{
+							System.out.println("What would you like to switch it to?");
 							Scanner sc5 = new Scanner (System.in);
 							String g = sc5.nextLine();
 							SISRunner.students.get(ch-1).setGrade3(g);
