@@ -5,7 +5,7 @@ public class getGPA
 		static double g2;
 		static double g3;
 		static double newGPA;
-		public static void class1()
+		public static void getNewGPA()
 			{			
 				for (int i=0;i<SISRunner.students.size();i++)
 					{
@@ -29,12 +29,6 @@ public class getGPA
 					{
 						g1=0.0;
 					}
-					}
-			}
-		public static void class2()
-		{
-			for (int i=0;i<SISRunner.students.size();i++)
-				{
 			if (SISRunner.students.get(i).getGrade2().equals("A")||SISRunner.students.get(i).getGrade2().equals("A-")||SISRunner.students.get(i).getGrade2().equals("A+"))
 				{
 					g2=4.0;
@@ -55,12 +49,6 @@ public class getGPA
 				{
 					g2=0.0;
 				}
-				}
-		}
-		public static void class3()
-			{
-				for (int i=0;i<SISRunner.students.size();i++)
-					{
 				if (SISRunner.students.get(i).getGrade3().equals("A")||SISRunner.students.get(i).getGrade3().equals("A-")||SISRunner.students.get(i).getGrade3().equals("A+"))
 					{
 						g3=4.0;
@@ -80,12 +68,17 @@ public class getGPA
 				if (SISRunner.students.get(i).getGrade3().equals("F")||SISRunner.students.get(i).getGrade3().equals("F-")||SISRunner.students.get(i).getGrade3().equals("F+"))
 					{
 						g3=0.0;
+					}			
+			newGPA=(((g1+g2+g3)/3)*100)/100;
+			SISRunner.students.get(i).setGPA(newGPA);
 					}
-					}
-			}
-		public static double newGPA()
-		{
-			newGPA=(g1+g2+g3)/3;
-			return (g1+g2+g3)/3;
-		}
+				
+				//When we want to print out GPA's, use the ling below to round it correctly
+				
+//			for (Student s: SISRunner.students)
+//				{
+//					System.out.printf(s.getFirst()+" "+"%.2f",s.getGPA());
+//					System.out.println();
+//				}
+	}
 	}

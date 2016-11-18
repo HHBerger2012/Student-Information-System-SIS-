@@ -23,7 +23,7 @@ public class SISRunner
 			}
 		for(int i=0; i<students.size(); i++)
 			{
-				students.get(i).setGPA(getGPA.newGPA());
+				students.get(i).setGPA(getGPA.newGPA);
 			}
 	}
 	public static Student read(String str)
