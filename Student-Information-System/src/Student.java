@@ -1,5 +1,6 @@
+import java.util.Comparator;
 
-public class Student
+public class Student implements Comparable<Student>
 	{
 		String first, last, period1, period2, period3;
 		double GPA;
@@ -87,6 +88,20 @@ public class Student
 		public void setGPA(double gPA)
 			{
 				GPA = gPA;
+			}
+		public static Comparator<Student> lastNameComparator=new Comparator<Student>(){
+		public int compare(Student arg0, Student arg1)
+			{
+				  String last1 = arg0.getLast().toUpperCase();
+			      String last2 = arg1.getLast().toUpperCase();
+			      return last1.compareTo(last2);
+			}
+		};
+		@Override
+		public int compareTo(Student arg0)
+			{
+				double compare=((Student) arg0).getGPA();
+				return (int) (this.GPA - compare);
 			}
 		
 	}

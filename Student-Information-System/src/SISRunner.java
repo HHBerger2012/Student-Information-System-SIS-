@@ -10,6 +10,7 @@ public class SISRunner
 			{
 				file=new Scanner(new File("studentInformation.txt"));
 				fillList();
+				students=Sort.sortByLast();
 				Sort.print();
 				//Menu.doMain();
 			}
