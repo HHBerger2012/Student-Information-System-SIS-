@@ -10,7 +10,7 @@ public class SISRunner
 			{
 				file=new Scanner(new File("studentInformation.txt"));
 				fillList();
-				students=Sort.sortByLast();
+				students=Sort.sortByPeriod1();
 				Sort.print();
 				//Menu.doMain();
 			}
