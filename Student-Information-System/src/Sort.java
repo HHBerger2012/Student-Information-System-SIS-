@@ -24,4 +24,19 @@ public class Sort
 				}
 			return sorted;
 		}
+		public static ArrayList<Student> sortByPeriod1()
+		{
+			Student[] test=new Student[SISRunner.students.size()];
+			for (int i=0; i<test.length; i++)
+				{
+					test[i]=SISRunner.students.get(i);
+				}
+			Arrays.sort(test, Student.firstPeriodComparator);
+			ArrayList<Student> sorted=new ArrayList<Student>();
+			for (int i=0; i<test.length; i++)
+				{
+					sorted.add(test[i]);
+				}
+			return sorted;
+		}
 	}

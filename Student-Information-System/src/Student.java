@@ -97,6 +97,14 @@ public class Student implements Comparable<Student>
 			      return last1.compareTo(last2);
 			}
 		};
+		public static Comparator<Student> firstPeriodComparator=new Comparator<Student>(){
+		public int compare(Student arg0, Student arg1)
+			{
+				  String last1 = arg0.getPeriod1().toUpperCase();
+			      String last2 = arg1.getPeriod1().toUpperCase();
+			      return last1.compareTo(last2);
+			}
+		};
 		@Override
 		public int compareTo(Student arg0)
 			{
