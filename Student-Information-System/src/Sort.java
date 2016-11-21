@@ -17,6 +17,7 @@ public class Sort
 		}
 		public static ArrayList<Student> sortByLast()
 		{
+			System.out.println();
 			Student[] test=new Student[SISRunner.students.size()];
 			for (int i=0; i<test.length; i++)
 				{
@@ -35,6 +36,7 @@ public class Sort
 		}
 		public static ArrayList<Student> sortByPeriod1()
 		{
+			System.out.println();
 			Student[] test=new Student[SISRunner.students.size()];
 			for (int i=0; i<test.length; i++)
 				{
@@ -53,6 +55,7 @@ public class Sort
 		}
 		public static ArrayList<Student> sortByPeriod2()
 		{
+			System.out.println();
 			Student[] test=new Student[SISRunner.students.size()];
 			for (int i=0; i<test.length; i++)
 				{
@@ -71,6 +74,7 @@ public class Sort
 		}
 		public static ArrayList<Student> sortByPeriod3()
 		{
+			System.out.println();
 			Student[] test=new Student[SISRunner.students.size()];
 			for (int i=0; i<test.length; i++)
 				{
@@ -89,6 +93,7 @@ public class Sort
 		}
 		public static ArrayList<Student> sortByGPA()
 		{
+			System.out.println();
 			Student[] test=new Student[SISRunner.students.size()];
 			for (int i=0; i<test.length; i++)
 				{
@@ -108,6 +113,7 @@ public class Sort
 		}
 		public static void end2()
 			{
+				try{Thread.sleep(1000);}catch(InterruptedException e){e.printStackTrace();}
 				int mainChoice;
 				Object[] options = {"Yes", "No"};
 				ImageIcon icon =  new ImageIcon("mn.jpg");

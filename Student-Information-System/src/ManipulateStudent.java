@@ -20,6 +20,7 @@ public class ManipulateStudent
 		}
 		public static void addStudent()
 			{
+				System.out.println();
 				System.out.println("Here are the current Students");
 				System.out.println();
 				int i=0;
@@ -27,7 +28,7 @@ public class ManipulateStudent
 					{
 						delay();
 						i++;
-						System.out.println(i+ " " + s.getFirst()+s.getLast());
+						System.out.println(i+ " " + s.getFirst()+" "+s.getLast());
 					}
 				System.out.println();
 				System.out.println("What is the student's first name?");
@@ -47,10 +48,13 @@ public class ManipulateStudent
 				String thirdPeriod = sc6.nextLine();
 				SISRunner.students.add(new Student(firstName,lastName,0.0,firstPeriod,secondPeriod,thirdPeriod,"","",""));
 				System.out.println();
+				delay();
 				System.out.println("You have successfully added "+SISRunner.students.get(SISRunner.students.size()-1).getFirst()+" "+SISRunner.students.get(SISRunner.students.size()-1).getLast());
 				System.out.println("Period 1: "+SISRunner.students.get(SISRunner.students.size()-1).getPeriod1());
 				System.out.println("Period 2: "+SISRunner.students.get(SISRunner.students.size()-1).getPeriod2());
 				System.out.println("Period 3: "+SISRunner.students.get(SISRunner.students.size()-1).getPeriod3());
+				System.out.println();
+				try{Thread.sleep(600);}catch(InterruptedException e){e.printStackTrace();}
 				System.out.println("Here are the new students now");
 				int m=0;
 				for (Student s:SISRunner.students)
@@ -63,6 +67,7 @@ public class ManipulateStudent
 			}
 		public static void deleteStudent()
 		{
+			System.out.println();
 			System.out.println("Here are all of the students");
 			System.out.println();
 			int i=0;
@@ -88,6 +93,7 @@ public class ManipulateStudent
 					System.out.println();
 					System.out.println("Here is the new list of students");
 					System.out.println();
+					try{Thread.sleep(600);}catch(InterruptedException e){e.printStackTrace();}
 					int a=0;
 					for (Student s:SISRunner.students)
 						{
@@ -121,6 +127,7 @@ public class ManipulateStudent
 		}
 		public static void end1()
 			{
+				try{Thread.sleep(1000);}catch(InterruptedException e){e.printStackTrace();}
 				int mainChoice;
 				Object[] options = {"Yes", "No"};
 				ImageIcon icon =  new ImageIcon("mn.jpg");

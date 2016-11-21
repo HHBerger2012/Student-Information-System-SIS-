@@ -10,6 +10,7 @@ public class ManipulateClass
 		static JFrame frame=new JFrame();
 		public static void switchClass()
 		{
+			System.out.println();
 			System.out.println("Whose class would you like to switch?");
 			System.out.println();
 			int z=0;
@@ -140,6 +141,7 @@ public class ManipulateClass
 		}
 		public static void changeGrade()
 		{
+			System.out.println();
 			System.out.println("Whose grade would you like to change?");
 			int z=0;
 			for (Student s:SISRunner.students)
@@ -199,6 +201,7 @@ public class ManipulateClass
 		}
 		public static void end()
 		{
+			try{Thread.sleep(1000);}catch(InterruptedException e){e.printStackTrace();}
 			int mainChoice;
 			Object[] options = {"Yes", "No"};
 			ImageIcon icon =  new ImageIcon("mn.jpg");
