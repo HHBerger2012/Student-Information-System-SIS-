@@ -46,6 +46,11 @@ public class ManipulateStudent
 				Scanner sc6 = new Scanner (System.in);
 				String thirdPeriod = sc6.nextLine();
 				SISRunner.students.add(new Student(firstName,lastName,0.0,firstPeriod,secondPeriod,thirdPeriod,"","",""));
+				System.out.println();
+				System.out.println("You have successfully added "+SISRunner.students.get(SISRunner.students.size()-1).getFirst()+" "+SISRunner.students.get(SISRunner.students.size()-1).getLast());
+				System.out.println("Period 1: "+SISRunner.students.get(SISRunner.students.size()-1).getPeriod1());
+				System.out.println("Period 2: "+SISRunner.students.get(SISRunner.students.size()-1).getPeriod2());
+				System.out.println("Period 3: "+SISRunner.students.get(SISRunner.students.size()-1).getPeriod3());
 				System.out.println("Here are the new students now");
 				int m=0;
 				for (Student s:SISRunner.students)
@@ -72,16 +77,47 @@ public class ManipulateStudent
 			int deletion = sc7.nextInt();
 			SISRunner.students.remove(deletion-1);
 			System.out.println();
-			System.out.println("Here is the new list of students");
-			System.out.println();
-			int a=0;
-			for (Student s:SISRunner.students)
+			System.out.println("Are you sure?");
+			System.out.println("(1) Yes");
+			System.out.println("(2) No");
+			Scanner userInput = new Scanner(System.in);
+			int choice5 = userInput.nextInt();
+			if (choice5==1)
 				{
-					delay();
-					a++;
-					System.out.println(a+ " " + s.getFirst()+" "+s.getLast());
+					System.out.println("Successfully Deleted Student");
+					System.out.println();
+					System.out.println("Here is the new list of students");
+					System.out.println();
+					int a=0;
+					for (Student s:SISRunner.students)
+						{
+							delay();
+							a++;
+							System.out.println(a+ " " + s.getFirst()+" "+s.getLast());
+						}
+					end1();
 				}
-			end1();
+			else if (choice5==2)
+				{
+					System.out.println("Would you still like to delete a Student?");
+					System.out.println("(1) Yes");
+					System.out.println("(2) No");
+					Scanner userInput2 = new Scanner(System.in);
+					int choice6 = userInput2.nextInt();
+					if (choice6==1)
+						{
+							deleteStudent();
+						}
+					else 
+						{
+							end1();
+						}		
+				}
+			else
+				{
+					System.out.println("That is not an option");
+					deleteStudent();
+				}
 		}
 		public static void end1()
 			{

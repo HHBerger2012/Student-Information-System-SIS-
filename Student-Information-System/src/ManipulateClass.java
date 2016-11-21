@@ -151,9 +151,9 @@ public class ManipulateClass
 			Scanner sc = new Scanner (System.in);
 			int ch = sc.nextInt();
 			System.out.println("What grade of "+SISRunner.students.get(ch-1).getFirst()+"'s would you like to change?");
-			System.out.println("(1) Period 1: "+SISRunner.students.get(ch-1).getGrade1());
-			System.out.println("(2) Period 2: "+SISRunner.students.get(ch-1).getGrade2());
-			System.out.println("(3) Period 3: "+SISRunner.students.get(ch-1).getGrade3());	
+			System.out.println("(1) "+SISRunner.students.get(ch-1).getPeriod1()+": "+SISRunner.students.get(ch-1).getGrade1());
+			System.out.println("(2) "+SISRunner.students.get(ch-1).getPeriod2()+": "+SISRunner.students.get(ch-1).getGrade2());
+			System.out.println("(3) "+SISRunner.students.get(ch-1).getPeriod3()+": "+SISRunner.students.get(ch-1).getGrade3());	
 			System.out.println();
 			Scanner sc2 = new Scanner (System.in);
 			int classc = sc2.nextInt();

@@ -34,10 +34,6 @@ public class SISRunner
 				str=str.substring(str.indexOf(' ')+1);
 			}
 		places[7]=str.substring(0);
-		//GPA is going to be 0; We can create a method that reads the arraylist and calculates GPA to set it.
-		return new Student(places[0], places[1], 0, places[2], places[4], places[6], places[3], places[5], places[7]);
-		
+		return new Student(places[0], places[1], 0, places[2], places[4], places[6], places[3], places[5], places[7]);	
 	}
-
 }
-//Test
