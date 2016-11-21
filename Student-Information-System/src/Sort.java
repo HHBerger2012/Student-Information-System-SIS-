@@ -21,7 +21,9 @@ public class Sort
 			for (int i=0; i<test.length; i++)
 				{
 					sorted.add(test[i]);
+					System.out.println(sorted.get(i).getFirst()+" "+sorted.get(i).getLast());
 				}
+			
 			return sorted;
 		}
 		public static ArrayList<Student> sortByPeriod1()
@@ -36,6 +38,7 @@ public class Sort
 			for (int i=0; i<test.length; i++)
 				{
 					sorted.add(test[i]);
+					System.out.println(sorted.get(i).getFirst()+" "+sorted.get(i).getLast()+" - "+sorted.get(i).getPeriod1());
 				}
 			return sorted;
 		}
@@ -51,6 +54,8 @@ public class Sort
 			for (int i=0; i<test.length; i++)
 				{
 					sorted.add(test[i]);
+					System.out.println(sorted.get(i).getFirst()+" "+sorted.get(i).getLast()+" - "+sorted.get(i).getPeriod2());
+
 				}
 			return sorted;
 		}
@@ -66,6 +71,8 @@ public class Sort
 			for (int i=0; i<test.length; i++)
 				{
 					sorted.add(test[i]);
+					System.out.println(sorted.get(i).getFirst()+" "+sorted.get(i).getLast()+" - "+sorted.get(i).getPeriod3());
+
 				}
 			return sorted;
 		}
@@ -81,6 +88,7 @@ public class Sort
 			for (int i=0; i<test.length; i++)
 				{
 					sorted.add(test[i]);
+					System.out.println(sorted.get(i).getFirst()+" "+sorted.get(i).getLast()+" - "+sorted.get(i).getGPA());
 				}
 			return sorted;
 		}

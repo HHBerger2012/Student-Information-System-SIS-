@@ -109,14 +109,49 @@ public class Menu
 				{
 				case 0:
 					{
+					Sort.sortByLast();
 					break;
 					}
 				case 1:
 					{
+					
 					break;
 					}
 				case 2:
 					{
+					sortClass();
+					break;
+					}
+				}
+		}
+		public static void sortClass()
+		{
+			int sortChoice;
+			Object[] options = {"Period 1", "Period 2", "Period 3"};
+			ImageIcon icon =  new ImageIcon("32.jpg");
+			sortChoice = JOptionPane.showOptionDialog(null, 
+				"Sort by Class",
+				"Sort By",
+				JOptionPane.YES_NO_CANCEL_OPTION,
+				JOptionPane.QUESTION_MESSAGE, 
+				icon,
+				options, 
+				options[1]);
+				switch(sortChoice)
+				{
+				case 0:
+					{
+					Sort.sortByPeriod1();
+					break;
+					}
+				case 1:
+					{
+					Sort.sortByPeriod2();
+					break;
+					}
+				case 2:
+					{
+					Sort.sortByPeriod3();
 					break;
 					}
 				}
