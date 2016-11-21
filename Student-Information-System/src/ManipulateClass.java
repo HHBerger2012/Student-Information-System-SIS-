@@ -1,40 +1,21 @@
 import java.util.Scanner;
 
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+
 public class ManipulateClass
 	{
-		public static void manipulateClassAction()
-		{
-			System.out.println("Would you like to switch a class or change a grade?");
-			System.out.println("(1) Switch Class");
-			System.out.println("(2) Change Grade");
-			Scanner sc = new Scanner (System.in);
-			int choice1 = sc.nextInt();
-			switch (choice1)
-			{
-				case 1:
-						{
-							switchClass();
-							break;
-						}
-				case 2:
-						{
-							changeGrade();
-							break;
-						}
-				default:
-						{
-							System.out.println("That is not an option");
-							manipulateClassAction();
-							break;
-						}
-			}
-		}
+		private static final long serialVersionUID=1L;
+		static JFrame frame=new JFrame();
 		public static void switchClass()
 		{
 			System.out.println("Whose class would you like to switch?");
+			System.out.println();
 			int z=0;
 			for (Student s:SISRunner.students)
 				{
+					ManipulateStudent.delay();
 					z++;
 					System.out.println(z+ " " + s.getFirst()+" "+s.getLast());
 				}
@@ -155,6 +136,7 @@ public class ManipulateClass
 							break;
 						}
 			}
+			end();
 		}
 		public static void changeGrade()
 		{
@@ -162,6 +144,7 @@ public class ManipulateClass
 			int z=0;
 			for (Student s:SISRunner.students)
 				{
+					ManipulateStudent.delay();
 					z++;
 					System.out.println(z+ " " + s.getFirst()+" "+s.getLast());
 				}
@@ -212,5 +195,33 @@ public class ManipulateClass
 			System.out.println("Period 1: "+SISRunner.students.get(ch-1).getGrade1());
 			System.out.println("Period 2: "+SISRunner.students.get(ch-1).getGrade2());
 			System.out.println("Period 3: "+SISRunner.students.get(ch-1).getGrade3());	
+			end();
+		}
+		public static void end()
+		{
+			int mainChoice;
+			Object[] options = {"Yes", "No"};
+			ImageIcon icon =  new ImageIcon("mn.jpg");
+			mainChoice = JOptionPane.showOptionDialog(null, 
+				"",
+				"Would You Like To Do Anything Else?",
+				JOptionPane.YES_NO_CANCEL_OPTION,
+				JOptionPane.QUESTION_MESSAGE, 
+				icon,
+				options, 
+				options[1]);
+				switch(mainChoice)
+				{
+				case 0:
+					{
+					Menu.doMain();
+					break;
+					}
+				case 1:
+					{
+						JOptionPane.showMessageDialog(frame, "Goodbye");
+					break;
+					}
+				}
 		}
 	}

@@ -24,19 +24,16 @@ public class Menu
 					case 0:
 						{
 						doAddDeleteMenu();
-						JOptionPane.showMessageDialog(frame, "");
 						break;
 						}
 					case 1:
 						{
 						doChangeMenu();
-						JOptionPane.showMessageDialog(frame, "");
 						break;
 						}
 					case 2:
 						{
 						doSortMenu();
-						JOptionPane.showMessageDialog(frame, "");	
 						break;
 						}
 					}
@@ -58,12 +55,12 @@ public class Menu
 				{
 				case 0:
 					{
-					JOptionPane.showMessageDialog(frame, "");
+					ManipulateStudent.addStudent();
 					break;
 					}
 				case 1:
 					{
-					JOptionPane.showMessageDialog(frame, "");
+					ManipulateStudent.deleteStudent();
 					break;
 					}
 				}
@@ -85,12 +82,12 @@ public class Menu
 				{
 				case 0:
 					{
-					JOptionPane.showMessageDialog(frame, "");
+					ManipulateClass.changeGrade();
 					break;
 					}
 				case 1:
 					{
-					JOptionPane.showMessageDialog(frame, "");
+					ManipulateClass.switchClass();
 					break;
 					}
 				}
@@ -112,17 +109,14 @@ public class Menu
 				{
 				case 0:
 					{
-					JOptionPane.showMessageDialog(frame, "");
 					break;
 					}
 				case 1:
 					{
-					JOptionPane.showMessageDialog(frame, "");
 					break;
 					}
 				case 2:
 					{
-					JOptionPane.showMessageDialog(frame, "");	
 					break;
 					}
 				}
