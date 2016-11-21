@@ -12,7 +12,7 @@ public class SISRunner
 				fillList();
 				students=Sort.sortByLast();
 				Sort.print();
-				//Menu.doMain();
+				Menu.doMain();
 			}
 	public static void fillList()
 	{
