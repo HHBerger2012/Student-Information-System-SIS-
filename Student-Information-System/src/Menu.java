@@ -114,7 +114,7 @@ public class Menu
 					}
 				case 1:
 					{
-					
+					Sort.sortByGPA();
 					break;
 					}
 				case 2:

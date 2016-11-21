@@ -124,8 +124,8 @@ public class Student implements Comparable<Student>
 				public static Comparator<Student> gpaComparator=new Comparator<Student>(){
 					public int compare(Student arg0, Student arg1)
 						{
-							if (arg0.getGPA() < arg1.getGPA()) return -1;
-					        if (arg0.getGPA() > arg1.getGPA()) return 1;
+							if (arg0.getGPA() > arg1.getGPA()) return -1;
+					        if (arg0.getGPA() < arg1.getGPA()) return 1;
 					        return 0;
 						}
 					};

@@ -1,7 +1,13 @@
 import java.util.*;
 
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+
 public class Sort
 	{
+		private static final long serialVersionUID=1L;
+		static JFrame frame=new JFrame();
 		public static void print()
 		{
 			for (Student s: SISRunner.students)
@@ -20,10 +26,11 @@ public class Sort
 			ArrayList<Student> sorted=new ArrayList<Student>();
 			for (int i=0; i<test.length; i++)
 				{
+					ManipulateStudent.delay();
 					sorted.add(test[i]);
 					System.out.println(sorted.get(i).getFirst()+" "+sorted.get(i).getLast());
 				}
-			
+			end2();
 			return sorted;
 		}
 		public static ArrayList<Student> sortByPeriod1()
@@ -37,9 +44,11 @@ public class Sort
 			ArrayList<Student> sorted=new ArrayList<Student>();
 			for (int i=0; i<test.length; i++)
 				{
+					ManipulateStudent.delay();
 					sorted.add(test[i]);
 					System.out.println(sorted.get(i).getFirst()+" "+sorted.get(i).getLast()+" - "+sorted.get(i).getPeriod1());
 				}
+			end2();
 			return sorted;
 		}
 		public static ArrayList<Student> sortByPeriod2()
@@ -53,10 +62,11 @@ public class Sort
 			ArrayList<Student> sorted=new ArrayList<Student>();
 			for (int i=0; i<test.length; i++)
 				{
+					ManipulateStudent.delay();
 					sorted.add(test[i]);
 					System.out.println(sorted.get(i).getFirst()+" "+sorted.get(i).getLast()+" - "+sorted.get(i).getPeriod2());
-
 				}
+			end2();
 			return sorted;
 		}
 		public static ArrayList<Student> sortByPeriod3()
@@ -70,10 +80,11 @@ public class Sort
 			ArrayList<Student> sorted=new ArrayList<Student>();
 			for (int i=0; i<test.length; i++)
 				{
+					ManipulateStudent.delay();
 					sorted.add(test[i]);
 					System.out.println(sorted.get(i).getFirst()+" "+sorted.get(i).getLast()+" - "+sorted.get(i).getPeriod3());
-
 				}
+			end2();
 			return sorted;
 		}
 		public static ArrayList<Student> sortByGPA()
@@ -87,9 +98,40 @@ public class Sort
 			ArrayList<Student> sorted=new ArrayList<Student>();
 			for (int i=0; i<test.length; i++)
 				{
+					ManipulateStudent.delay();
 					sorted.add(test[i]);
-					System.out.println(sorted.get(i).getFirst()+" "+sorted.get(i).getLast()+" - "+sorted.get(i).getGPA());
+					System.out.printf(sorted.get(i).getFirst()+" "+sorted.get(i).getLast()+" "+"%.2f",sorted.get(i).getGPA());
+					System.out.println();
 				}
+			end2();
 			return sorted;
 		}
+		public static void end2()
+			{
+				int mainChoice;
+				Object[] options = {"Yes", "No"};
+				ImageIcon icon =  new ImageIcon("mn.jpg");
+				mainChoice = JOptionPane.showOptionDialog(null, 
+					"",
+					"Would You Like To Do Anything Else?",
+					JOptionPane.YES_NO_CANCEL_OPTION,
+					JOptionPane.QUESTION_MESSAGE, 
+					icon,
+					options, 
+					options[1]);
+					switch(mainChoice)
+					{
+					case 0:
+						{
+						Menu.doMain();
+						break;
+						}
+					case 1:
+						{
+							JOptionPane.showMessageDialog(frame, "Goodbye");
+						break;
+						}
+					}
+			}
 	}
+

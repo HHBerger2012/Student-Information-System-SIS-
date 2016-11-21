@@ -10,6 +10,7 @@ public class SISRunner
 			{
 				file=new Scanner(new File("studentInformation.txt"));
 				fillList();
+				getGPA.getNewGPA();
 				Menu.doMain();
 			}
 	public static void fillList()

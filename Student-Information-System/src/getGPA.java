@@ -71,14 +71,7 @@ public class getGPA
 					}			
 			newGPA=(((g1+g2+g3)/3)*100)/100;
 			SISRunner.students.get(i).setGPA(newGPA);
+
 					}
-				
-				//When we want to print out GPA's, use the ling below to round it correctly
-				
-//			for (Student s: SISRunner.students)
-//				{
-//					System.out.printf(s.getFirst()+" "+"%.2f",s.getGPA());
-//					System.out.println();
-//				}
 	}
 	}
